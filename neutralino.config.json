@@ -1,0 +1,38 @@
+{
+    "applicationId": "hmm.curtain",
+    "version": "1.0.0",
+    "defaultMode": "window",
+    "documentRoot": "/build",
+    "url": "/",
+    "enableServer": true,
+    "enableNativeAPI": true,
+    "nativeAllowList": [
+        "app.*",
+        "os.*",
+        "debug.log"
+    ],
+    "modes": {
+        "window": {
+            "title": "hedgemodmanager-curtain",
+            "width": 853,
+            "height": 480,
+            "minWidth": 853,
+            "minHeight": 480,
+            "fullScreen": false,
+            "alwaysOnTop": false,
+            "icon": "/assets/icon.png",
+            "enableInspector": false,
+            "borderless": true,
+            "maximize": false,
+            "hidden": false,
+            "resizable": false,
+            "exitProcessOnClose": false
+        }
+    },
+    "cli": {
+        "binaryName": "hedgemodmanager-curtain",
+        "resourcesPath": "/build",
+        "binaryVersion": "4.14.1",
+        "clientVersion": "3.12.0"
+    }
+}

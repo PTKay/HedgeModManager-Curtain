@@ -1,0 +1,18 @@
+.content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    color: var(--fg-0);
+    padding: .5rem;
+}
+
+.icon {
+    width: 30px;
+    margin-right: .3em;
+}
+
+.title {
+    padding-top: .25em;
+    font-size: larger;
+}
