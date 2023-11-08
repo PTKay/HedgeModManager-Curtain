@@ -1,0 +1,20 @@
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-1);
+    color: var(--fg-0);
+    padding: .5rem;
+    user-select: none;
+    height: max-content;
+}
+
+.icon {
+    width: 30px;
+    margin-right: .3em;
+}
+
+.title {
+    padding-top: .25em;
+    font-size: larger;
+}

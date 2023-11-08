@@ -1,0 +1,58 @@
+{
+  "name": "curtain",
+  "productName": "curtain",
+  "version": "1.0.0",
+  "description": "HedgeModManager's big picture launcher",
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "conc --kill-others \"webpack --config webpack.common.js --watch\" \"electron-forge start\"",
+    "package": "npm run build && electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "build": "webpack --config webpack.common.js",
+    "build-single-exe": "electron-builder -p --win"
+  },
+  "keywords": [],
+  "author": {
+    "name": "PTKay",
+    "email": "jp_moura99@outlook.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@types/node": "^20.9.0",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-router-dom": "^5.3.3",
+    "babel-loader": "^9.1.3",
+    "concurrently": "^8.2.2",
+    "css-loader": "^6.8.1",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.18.0",
+    "sass": "^1.69.5",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "@rabbitholesyndrome/electron-forge-maker-portable": "^0.1.1",
+    "electron": "27.0.3",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.3",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack-electron-reload": "^1.0.1"
+  }
+}

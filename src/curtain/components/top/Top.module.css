@@ -1,0 +1,21 @@
+.topBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-1);
+    color: var(--fg-0);
+    padding: .5rem;
+    border-bottom: var(--accent-0) solid 3px;
+    user-select: none;
+    z-index: 2;
+}
+
+.icon {
+    width: 30px;
+    margin-right: .3em;
+}
+
+.title {
+    padding-top: .25em;
+    font-size: larger;
+}
