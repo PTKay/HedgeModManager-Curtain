@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import App from './curtain/App'
 import { StrictMode } from 'react';
-import { init, app, events } from "@neutralinojs/lib"
+import * as Neutralino from "@neutralinojs/lib"
 
 const container = document.getElementById('root') as HTMLElement;
 const root = createRoot(container);
@@ -13,6 +13,7 @@ root.render(
     </StrictMode>
 )
 
-init()
-events.on("windowClose", () => app.exit())
+Neutralino.init()
+Neutralino.events.on("windowClose", () => Neutralino.app.exit())
+Neutralino.window.center()
 document.addEventListener('contextmenu', event => event.preventDefault())

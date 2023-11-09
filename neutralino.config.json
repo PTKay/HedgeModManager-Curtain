@@ -8,9 +8,11 @@
     "enableNativeAPI": true,
     "nativeAllowList": [
         "app.*",
-        "os.*",
-        "debug.log"
+        "os.*"
     ],
+    "logging": {
+        "writeToLogFile": false
+    },
     "modes": {
         "window": {
             "title": "hedgemodmanager-curtain",
@@ -19,12 +21,10 @@
             "minWidth": 853,
             "minHeight": 480,
             "fullScreen": false,
-            "alwaysOnTop": false,
             "icon": "/assets/icon.png",
             "enableInspector": false,
             "borderless": true,
-            "maximize": false,
-            "hidden": false,
+            "center": true,
             "resizable": false,
             "exitProcessOnClose": false
         }
