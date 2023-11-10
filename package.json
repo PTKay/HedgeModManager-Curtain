@@ -5,16 +5,14 @@
   "description": "HedgeModManager's big picture launcher",
   "scripts": {
     "serve": "webpack serve --config webpack.common.js",
-    "start": "npm run build-web && conc --kill-others \"webpack --config webpack.common.js --watch\" \"neu run\"",
+    "start": "neu update && npm run build-web && conc --kill-others \"webpack --config webpack.common.js --watch\" \"neu run\"",
     "build-web": "webpack --config webpack.common.js",
     "build": "npm run build-web && neu build"
   },
-  "keywords": [],
   "author": {
     "name": "PTKay",
     "email": "jp_moura99@outlook.com"
   },
-  "license": "MIT",
   "dependencies": {
     "@neutralinojs/lib": "^3.12.0",
     "@neutralinojs/neu": "^10.0.0",
