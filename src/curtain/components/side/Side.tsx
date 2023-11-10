@@ -1,5 +1,4 @@
 import styles from "./Side.module.css"
-import icon from "../../../../../assets/icon.png"
 
 export default function Side() {
     return (

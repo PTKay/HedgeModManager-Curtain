@@ -1,0 +1,26 @@
+.modsList {
+    display: flex;
+    overflow: auto;
+}
+
+.mods {
+    width: 100%;
+    overflow: auto;
+}
+
+.list {
+    height: fit-content;
+    overflow: auto;
+}
+
+.header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 6.25% 27% 22% 23% auto;
+    grid-template-rows: auto;
+    background-color: var(--bg-1);
+    text-align: center;
+    margin-bottom: .5em;
+    padding: .4em .3em .4em .3em;
+    overflow: auto;
+}

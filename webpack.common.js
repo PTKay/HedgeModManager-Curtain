@@ -38,7 +38,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Curtain',
-            template: 'src/index.html'
+            template: 'src/index.html',
+            favicon: "./assets/icon.png"
         })
     ],
     resolve: {

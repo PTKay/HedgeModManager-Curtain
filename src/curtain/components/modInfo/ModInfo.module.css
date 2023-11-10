@@ -1,18 +1,12 @@
-.bottom {
+.modinfo {
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color: var(--bg-1);
     color: var(--fg-0);
-    padding: .5rem;
-}
-
-.icon {
-    width: 30px;
-    margin-right: .3em;
+    padding: 2em;
+    width: 20em;
 }
 
 .title {
     padding-top: .25em;
-    font-size: larger;
 }

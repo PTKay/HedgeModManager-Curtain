@@ -20,7 +20,7 @@
             "height": 480,
             "minWidth": 853,
             "minHeight": 480,
-            "fullScreen": false,
+            "fullScreen": true,
             "icon": "/assets/icon.png",
             "enableInspector": false,
             "borderless": true,

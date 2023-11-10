@@ -5,8 +5,7 @@ import './stylesheets/themes.css';
 import './stylesheets/fonts.css';
 import Top from './components/top/Top';
 import Side from './components/side/Side';
-import Bottom from './components/bottom/Bottom';
-import Content from './components/mods/Content';
+import Content from './components/content/Content';
 
 
 export default function App() {
@@ -15,10 +14,7 @@ export default function App() {
             <Top />
             <div className="page">
                 <Side />
-                <div className="content">
-                    <Content />
-                    <Bottom />
-                </div>
+                <Content />
             </div>
         </Fragment>
     )
