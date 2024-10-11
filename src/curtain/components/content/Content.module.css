@@ -7,7 +7,26 @@
     flex: 1 1;
     position: relative;
     width: 100%;
-    margin-left: 5em;
+    margin-left: 4.5em;
+    transition: .25s;
+}
+
+.darkened {
+    position: fixed;
+    top: 0;
+    content: '';
+    background-color: black;
+    transition: .25s;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    z-index: 1;
+    pointer-events:none;
+}
+
+.darkenedActive {
+    transition: .25s;
+    opacity: 50%;
 }
 
 .icon {

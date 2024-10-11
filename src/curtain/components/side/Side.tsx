@@ -1,15 +1,17 @@
 import styles from "./Side.module.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWrench, faGear, faCode, faPlay } from '@fortawesome/free-solid-svg-icons'
 
-export default function Side() {
+export default function Side(props: SideStateComponent) {
     return (
-        <div className={styles.sidebar}>
-            <div>
-                <button className={styles.category}>Mods</button>
-                <button className={styles.category}>Codes</button>
+        <div className={styles.sidebar} onMouseEnter={() => props.setSideHovered(true)} onMouseLeave={() => props.setSideHovered(false)}>
+            <div className={styles.top}>
+                <div className={styles.category}><FontAwesomeIcon icon={faWrench} className={styles.icon}/>Mods</div>
+                <div className={styles.category}><FontAwesomeIcon icon={faCode} className={styles.icon}/>Codes</div>
             </div>
             <div className={styles.bottom}>
-                <button className={`${styles.category} ${styles.action}`}>Settings</button>
-                <button className={`${styles.category} ${styles.action}`}>Play</button>
+                <div className={`${styles.category} ${styles.action}`}><FontAwesomeIcon icon={faGear} className={styles.icon}/>Settings</div>
+                <div className={`${styles.category} ${styles.action}`}><FontAwesomeIcon icon={faPlay} className={styles.icon}/>Play</div>
             </div>
         </div>
     );

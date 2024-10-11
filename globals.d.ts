@@ -14,3 +14,11 @@ type ModsComponent = {
 type ModComponent = {
     mod: Mod
 }
+
+type SideStateComponent = {
+    setSideHovered: Function
+}
+
+type ContentStateComponent = {
+    isSideHovered: boolean
+}

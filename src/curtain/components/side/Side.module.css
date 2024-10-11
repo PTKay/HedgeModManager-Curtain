@@ -8,35 +8,45 @@
     justify-content: space-between;
     overflow: hidden;
     transition: 0.25s;
-    width: 5em;
+    width: 4.5em;
     height: 100%;
     padding-top: 3em;
     position: absolute;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sidebar:is(:hover, :focus-within) {
-    width: 10em;
+    width: 12em;
 }
 
 .category {
-    font-size: 15pt;
-    padding: 0 0 0 1em;
-    height: 3em;
+    display: flex;
+    align-items: center;
+    font-size: 17pt;
+    padding: 0;
+    height: 2.5em;
     width: 10em;
     text-align: left;
     background-color: var(--bg-1);
     border: transparent 2px solid;
     font-weight: bold;
     -webkit-tap-highlight-color: transparent;
+    user-select: none;
 }
 
 .category:is(:hover, :focus, :active) {
     background-color: var(--accent-0);
     outline: none;
+    cursor: pointer;
 }
 
 .action {
     background-color: black;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    padding: 0 1em 0 .8em;
 }

@@ -18,21 +18,6 @@ export default function ModsList(props: ModsComponent) {
                 </div>
                 <div className={styles.list}>
                     {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
-                    {mods.map(mod => <Mod mod={mod} key={mod.id}/>)}
                 </div>
             </div>
             <ModInfo />

@@ -13,6 +13,17 @@
             "runtimeArgs": [
                 "start"
             ],
-        }
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Serve",
+            "cwd": "${workspaceFolder}",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "serve"
+            ]
+        },
     ]
 }
