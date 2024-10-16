@@ -1,0 +1,105 @@
+/* FADES */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+    
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+    
+.fadeIn {
+    animation-duration: 0.15s;
+    animation-name: fade-in;
+    animation-fill-mode: both;
+}
+    
+.fadeOut {
+    animation-duration: 0.15s;
+    animation-name: fade-out;
+    animation-fill-mode: both;
+    pointer-events: none
+}
+
+/* SLIDES */
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        transform: translateY(1em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0em);
+    }
+}
+    
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0em);
+    }
+    100% {
+        transform: translateY(1em);
+        opacity: 0;
+    }
+}
+
+.slideIn {
+    animation-duration: 0.15s;
+    animation-name: slide-in;
+    animation-fill-mode: both;
+}
+    
+.slideOut {
+    animation-duration: 0.15s;
+    animation-name: slide-out;
+    animation-fill-mode: both;
+    pointer-events: none
+}
+
+/* SCALES */
+
+@keyframes scale-in {
+    0% {
+        opacity: 0;
+        transform: scale(99%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+    
+@keyframes scale-out {
+    0% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+    100% {
+        transform: scale(99%);
+        opacity: 0;
+    }
+}
+
+.scaleIn {
+    animation-duration: 0.15s;
+    animation-name: scale-in;
+    animation-fill-mode: both;
+}
+    
+.scaleOut {
+    animation-duration: 0.15s;
+    animation-name: scale-out;
+    animation-fill-mode: both;
+    pointer-events: none
+}

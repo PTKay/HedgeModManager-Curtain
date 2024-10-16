@@ -1,0 +1,26 @@
+.mod {
+    display: grid;
+    grid-template-columns: 5% 28% auto auto auto;
+    grid-template-rows: auto;
+    background-color: var(--bg-2);
+    padding: .75em;
+    margin: 0 .75em .5em .75em;
+    border-radius: .3em;
+    transition: 100ms;
+    text-wrap: nowrap;
+    text-overflow: clip;
+    cursor: pointer;
+}
+
+.mod:hover {
+    background-color: var(--accent-2);
+    transition: 100ms;
+}
+
+.version {
+    text-align: center;
+}
+
+.author {
+    text-align: center;
+}

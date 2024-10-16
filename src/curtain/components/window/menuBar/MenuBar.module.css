@@ -1,4 +1,4 @@
-.sidebar {
+.menubar {
     align-items: stretch;
     background-color: var(--bg-1);
     box-sizing: border-box;
@@ -16,7 +16,7 @@
     z-index: 2;
 }
 
-.sidebar:is(:hover, :focus-within) {
+.menubar:is(:hover, :focus-within) {
     width: 12em;
 }
 

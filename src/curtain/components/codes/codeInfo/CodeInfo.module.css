@@ -1,0 +1,13 @@
+.codeInfo {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-1);
+    color: var(--fg-0);
+    padding: 2em;
+    width: 20em;
+    height: 90vh;
+}
+
+.title {
+    padding-top: .25em;
+}

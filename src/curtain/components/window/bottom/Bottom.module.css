@@ -1,0 +1,52 @@
+/*
+.bottomBar {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    background-color: var(--bg-1);
+    color: var(--fg-0);
+    user-select: none;
+    z-index: 1;
+    padding: 0 0 0 6em;
+}
+*/
+
+.bottomBar {
+    display: grid;
+    position: fixed;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 3em;
+    background-color: var(--bg-1);
+    color: var(--fg-0);
+    user-select: none;
+    z-index: 1;
+}
+
+.bottomBarItem {
+    display: flex;
+    align-items: center;
+    padding-right: 1em
+}
+
+.bottomBarLeftSide {
+    padding: 0 0 0 6em;
+}
+
+.bottomBarRightSide {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 0 1em 0 0;
+}
+
+.icon {
+    height: 1.5em;
+    margin-right: .5em;
+}

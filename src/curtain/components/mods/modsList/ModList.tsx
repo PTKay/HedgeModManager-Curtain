@@ -1,13 +1,16 @@
-import { Fragment } from "react";
+import { ModsComponent } from "src/types/Mod";
 import Mod from "../mod/Mod";
-import styles from "./ModsList.module.css"
 import ModInfo from "../modInfo/ModInfo";
+
+
+import styles from "./ModsList.module.css"
+import animations from "src/curtain/stylesheets/modules/animations.module.css"
 
 export default function ModsList(props: ModsComponent) {
     const mods = props.mods
 
     return (
-        <div className={styles.modsList}>
+        <div className={`${styles.modsList} ${animations.scaleIn}`}>
             <div className={styles.mods}>
                 <div className={styles.header}>
                     <span></span>
