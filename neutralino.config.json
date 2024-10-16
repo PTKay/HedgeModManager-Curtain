@@ -8,7 +8,9 @@
   "enableNativeAPI": true,
   "nativeAllowList": [
     "app.*",
-    "os.*"
+    "os.*",
+    "filesystem.*",
+    "window.*"
   ],
   "logging": {
     "writeToLogFile": false

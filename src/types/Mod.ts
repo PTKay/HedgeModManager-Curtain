@@ -1,5 +1,5 @@
 export type Mod = {
-    id: number
+    id: string
     title: string
     version: string
     author: string
