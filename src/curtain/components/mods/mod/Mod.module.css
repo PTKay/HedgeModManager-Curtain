@@ -1,6 +1,6 @@
 .mod {
     display: grid;
-    grid-template-columns: 5% 28% 23% 23.25% auto;
+    grid-template-columns: 3em 28% 23% 23.25% auto;
     grid-template-rows: auto;
     background-color: var(--bg-2);
     padding: .75em;
@@ -24,6 +24,11 @@
 
 .author {
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title {
     overflow: hidden;
     text-overflow: ellipsis;
 }

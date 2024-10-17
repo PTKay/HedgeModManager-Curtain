@@ -1,0 +1,3 @@
+type AppProperties = {
+    isBrowserContext : boolean
+}

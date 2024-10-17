@@ -31,26 +31,7 @@ function getCurrentPage(selectedItem: MenuBarItem, mods : Array<Mod>): ReactNode
     }
 }
 
-function getDummyModsList() : Array<Mod> {
-    return [
-        {
-            id: "1",
-            title: "Free Camera",
-            version: "1.2",
-            author: "Skyth",
-            isActive: true
-        },
-        {
-            id: "2",
-            title: "Generations Raytracing",
-            version: "0.9",
-            author: "Skyth",
-            isActive: false
-        }
-    ]
-}
-
-export default function App() {
+export default function App(props : AppProperties) {
     const [menuState, setMenuState] = useState<MenuBarState>({
         isHovered: false,
         selectedItem: MenuBarItem.MODS
@@ -65,11 +46,7 @@ export default function App() {
         const getMods = async () => { 
             let loadedMods
             try {
-                //loadedMods = await parseModList("ModsDB.ini")
-                loadedMods = getDummyModsList()
-                                .concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList())
-                                .concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList())
-                                .concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList())
+                loadedMods = await parseModList("ModsDB.ini", props.isBrowserContext)
             } catch (e) {
                 console.log(e)
             }
