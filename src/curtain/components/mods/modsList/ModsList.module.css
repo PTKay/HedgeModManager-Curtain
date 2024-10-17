@@ -6,11 +6,11 @@
 .mods {
     width: 100%;
     overflow: auto;
+    margin-bottom: 6.5em;
 }
 
 .list {
-    height: 70dvh;
-    overflow: auto;
+    height: 100%;
 }
 
 .header {
@@ -25,4 +25,5 @@
     margin-bottom: .5em;
     padding: .4em .3em .4em .3em;
     overflow: auto;
+    z-index: 1;
 }

@@ -7,7 +7,7 @@
     "serve": "webpack serve --config webpack.common.js",
     "start": "npx @neutralinojs/neu update && npm run build-web && conc --kill-others \"webpack --config webpack.common.js --watch\" \"neu run -- --window-enable-inspector\"",
     "build-web": "webpack --config webpack.common.js",
-    "build": "npm run build-web && npx @neutralinojs/neu update && npx @neutralinojs/neu build"
+    "build": "npm run build-web && npx @neutralinojs/neu update && npx @neutralinojs/neu build --release"
   },
   "author": {
     "name": "PTKay",

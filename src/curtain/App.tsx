@@ -31,7 +31,7 @@ function getCurrentPage(selectedItem: MenuBarItem, mods : Array<Mod>): ReactNode
     }
 }
 
-function getModsList() : Array<Mod> {
+function getDummyModsList() : Array<Mod> {
     return [
         {
             id: "1",
@@ -65,12 +65,14 @@ export default function App() {
         const getMods = async () => { 
             let loadedMods
             try {
-                loadedMods = await parseModList("ModsDB.ini")
+                //loadedMods = await parseModList("ModsDB.ini")
+                loadedMods = getDummyModsList()
+                                .concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList())
+                                .concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList())
+                                .concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList()).concat(getDummyModsList())
             } catch (e) {
                 console.log(e)
             }
-
-            console.log(loadedMods)
 
             if (loadedMods == null) {
                 setMods([])
