@@ -3,6 +3,7 @@ export type Mod = {
     title: string
     version: string
     author: string
+    isActive: boolean
 }
 
 export type ModsComponent = {

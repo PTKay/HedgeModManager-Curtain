@@ -6,12 +6,18 @@ export async function parseModList(modsDbPath : string) : Promise<Array<Mod>> {
     const modsDBIni = await fs.readFile(modsDbPath)
     const modsDB = parse(modsDBIni)
 
-    const mods : Array<Mod> = []
+    const mods : Map<string, Mod> = new Map
     for (let key in {...modsDB.Mods}) {
-        mods.push(await parseMod(modsDB.Mods[key], key))
+        mods.set(key, await parseMod(modsDB.Mods[key], key))
     }
 
-    return mods
+    const activeModCount = modsDB.Main.ActiveModCount
+    for (let i = 0; i < activeModCount; ++i) {
+        const activeModId = modsDB.Main[`ActiveMod${i}`]
+        mods.get(activeModId).isActive = true
+    }
+
+    return Array.from(mods.values()).sort(compareMods)
 }
 
 async function parseMod(modPath : string, id : string) : Promise<Mod> {
@@ -23,6 +29,25 @@ async function parseMod(modPath : string, id : string) : Promise<Mod> {
         id: id,
         title: mod.Desc.Title,
         version: mod.Desc.Version,
-        author: mod.Desc.Author
+        author: mod.Desc.Author,
+        isActive: false
     }
+}
+
+function compareMods(a: Mod, b: Mod ) {
+    if (!a.isActive && b.isActive) {
+        return 1
+    }
+    if (a.isActive && !b.isActive) {
+        return -1
+    }
+
+    if ( a.title < b.title ) {
+        return -1
+    }
+    if ( a.title > b.title ) {
+        return 1
+    }
+
+    return 0;
 }

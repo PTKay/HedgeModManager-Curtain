@@ -108,3 +108,6 @@ neutralino.js
 # Neutralinojs related files
 .storage
 *.log
+
+# Files for Testing
+ModsDB.ini

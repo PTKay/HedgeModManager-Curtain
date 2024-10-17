@@ -37,13 +37,15 @@ function getModsList() : Array<Mod> {
             id: "1",
             title: "Free Camera",
             version: "1.2",
-            author: "Skyth"
+            author: "Skyth",
+            isActive: true
         },
         {
             id: "2",
             title: "Generations Raytracing",
             version: "0.9",
-            author: "Skyth"
+            author: "Skyth",
+            isActive: false
         }
     ]
 }
@@ -67,6 +69,8 @@ export default function App() {
             } catch (e) {
                 console.log(e)
             }
+
+            console.log(loadedMods)
 
             if (loadedMods == null) {
                 setMods([])

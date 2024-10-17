@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { writeSync } = require('fs')
 
 module.exports = {
     mode: 'development',
@@ -58,5 +59,6 @@ module.exports = {
           directory: path.join(__dirname, 'build'),
         },
         port: 9000,
+        devMiddleware: { writeToDisk: true }
     },
 }

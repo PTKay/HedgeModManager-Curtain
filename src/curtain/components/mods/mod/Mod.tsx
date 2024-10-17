@@ -4,8 +4,8 @@ import styles from "./Mod.module.css"
 import { useState } from "react";
 
 export default function Mod(props: ModComponent) {
-    const [isEnabled, setEnabled] = useState(false)
     const mod = props.mod
+    const [isEnabled, setEnabled] = useState(mod.isActive)
 
     return (
         <div className={styles.mod} onClick={() => {setEnabled(!isEnabled)}}>
