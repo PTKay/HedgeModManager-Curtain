@@ -11,18 +11,18 @@ import Menu from './components/window/menuBar/MenuBar';
 import Bottom from './components/window/bottom/Bottom';
 import ModsList from './components/mods/modsList/ModList';
 
-import { MenuBarItem, MenuBarState } from 'src/types/Menu';
+import { MenuBarItemType, MenuBarState } from 'src/types/Menu';
 import { Mod } from "src/types/Mod";
 import CodesList from './components/codes/codesList/CodesList';
 import { parseModList } from './utils/ModParser';
 
-function getCurrentPage(selectedItem: MenuBarItem, mods : Array<Mod>): ReactNode {
+function getCurrentPage(selectedItem: MenuBarItemType, mods : Array<Mod>): ReactNode {
     switch(selectedItem) {
-        case MenuBarItem.MODS:
+        case MenuBarItemType.MODS:
             return (
                 <ModsList mods={mods} />
             )
-        case MenuBarItem.CODES:
+        case MenuBarItemType.CODES:
             return (
                 <CodesList codes={[]} />
             )
@@ -34,11 +34,11 @@ function getCurrentPage(selectedItem: MenuBarItem, mods : Array<Mod>): ReactNode
 export default function App(props : AppProperties) {
     const [menuState, setMenuState] = useState<MenuBarState>({
         isHovered: false,
-        selectedItem: MenuBarItem.MODS
+        selectedItem: MenuBarItemType.MODS
     })
     const [mods, setMods] = useState(null)
 
-    if (menuState.selectedItem == MenuBarItem.PLAY) {
+    if (menuState.selectedItem == MenuBarItemType.PLAY) {
         app.exit()
     }
 

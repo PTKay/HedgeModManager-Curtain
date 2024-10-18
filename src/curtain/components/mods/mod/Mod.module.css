@@ -3,9 +3,9 @@
     grid-template-columns: 3em 28% 23% 23.25% auto;
     grid-template-rows: auto;
     background-color: var(--bg-2);
-    padding: .75em;
+    padding: .9em;
     margin: 0 .75em .5em .75em;
-    border-radius: .3em;
+    border-radius: .75em;
     transition: 100ms;
     text-wrap: nowrap;
     cursor: pointer;

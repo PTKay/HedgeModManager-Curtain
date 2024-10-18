@@ -1,0 +1,13 @@
+.select {
+    width: 14em;
+    height: 2em;
+    border-radius: .5em;
+    opacity: 100%;
+    transition: .15s;
+    text-align: center;
+}
+
+.hidden {
+    opacity: 0%;
+    transition: .1s;
+}

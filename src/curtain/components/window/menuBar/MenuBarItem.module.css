@@ -1,0 +1,32 @@
+.category {
+    display: flex;
+    align-items: center;
+    font-size: 17pt;
+    padding: 0;
+    height: 2.5em;
+    width: 10em;
+    text-align: left;
+    background-color: var(--bg-2);
+    border: transparent 2px solid;
+    font-weight: bold;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+.category:is(:hover, :focus, :active) {
+    background-color: var(--accent-1);
+    outline: none;
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--accent-0) !important;
+}
+
+.action {
+    background-color: var(--bg-3);
+}
+
+.action:is(:hover, :focus) {
+    background-color: var(--bg-4);
+}

@@ -1,16 +1,13 @@
 import styles from "./MenuBar.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWrench, faGear, faCode, faPlay } from '@fortawesome/free-solid-svg-icons'
-import { MenuBarItem, MenuBarState, MenuBarStateComponent } from "src/types/Menu";
+import { MenuBarItemType, MenuBarState, MenuBarStateComponent } from "src/types/Menu";
+import MenuBarItem from "./MenuBarItem";
+import gameIcon from "assets/games/SonicGenerations.png"
+import MenuBarGameSelector from "./MenuBarGameSelector";
 
 export default function MenuBar(props: MenuBarStateComponent) {
     const menuState = props.currentState
-
-    const setSelectedItem : Function = (selectedItem : MenuBarItem) => {
-        const newState : MenuBarState = {...menuState}
-        newState.selectedItem = selectedItem
-        props.setState(newState)
-    }
 
     const setHovered : Function = (isHovered : boolean) => {
         const newState : MenuBarState = {...menuState}
@@ -21,12 +18,26 @@ export default function MenuBar(props: MenuBarStateComponent) {
     return (
         <div className={styles.menubar} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
             <div className={styles.top}>
-                <div onClick={() => setSelectedItem(MenuBarItem.MODS)} className={styles.category}><FontAwesomeIcon icon={faWrench} className={styles.icon}/>Mods</div>
-                <div onClick={() => setSelectedItem(MenuBarItem.CODES)} className={styles.category}><FontAwesomeIcon icon={faCode} className={styles.icon}/>Codes</div>
+                <img draggable={false} src={gameIcon} className={styles.gameicon}></img>
+                <MenuBarGameSelector isHidden={!menuState.isHovered}/>
+            </div>
+            <div className={styles.middle}>
+                <MenuBarItem type={MenuBarItemType.MODS} currentState={menuState} setState={props.setState}>
+                    <FontAwesomeIcon icon={faWrench} className={styles.icon}/>Mods
+                </MenuBarItem>
+                <MenuBarItem type={MenuBarItemType.CODES} currentState={menuState} setState={props.setState}>
+                    <FontAwesomeIcon icon={faCode} className={styles.icon}/>Codes
+                </MenuBarItem>
+                <MenuBarItem type={MenuBarItemType.SETTINGS} currentState={menuState} setState={props.setState}>
+                    <FontAwesomeIcon icon={faGear} className={styles.icon}/>Settings
+                </MenuBarItem>
+                <div className={styles.actions}>
+                    <MenuBarItem type={MenuBarItemType.PLAY} currentState={menuState} setState={props.setState} isAction={true}>
+                        <FontAwesomeIcon icon={faPlay} className={styles.icon}/>Play
+                    </MenuBarItem>
+                </div>
             </div>
             <div className={styles.bottom}>
-                <div onClick={() => setSelectedItem(MenuBarItem.SETTINGS)} className={`${styles.category} ${styles.action}`}><FontAwesomeIcon icon={faGear} className={styles.icon}/>Settings</div>
-                <div onClick={() => setSelectedItem(MenuBarItem.PLAY)} className={`${styles.category} ${styles.action}`}><FontAwesomeIcon icon={faPlay} className={styles.icon}/>Play</div>
             </div>
         </div>
     );

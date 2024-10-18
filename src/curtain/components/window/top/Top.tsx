@@ -5,7 +5,7 @@ export default function Top() {
     return (
         <div className={styles.topBar}>
            <img draggable={false} src={icon} className={styles.icon}></img>
-           <span className={styles.title}><b>Hedge</b>ModManager</span>
+           <span className={styles.title}>HedgeModManager</span>
         </div>
     );
 }
