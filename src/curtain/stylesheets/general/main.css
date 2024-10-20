@@ -15,7 +15,7 @@ body {
 #root {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .page {
@@ -26,5 +26,5 @@ body {
     margin-right: auto;
     max-width: 100%;
     width: 100%;
-    height: -webkit-fill-available;
+    height: 80.5dvh;
 }

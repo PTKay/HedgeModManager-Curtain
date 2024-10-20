@@ -68,10 +68,10 @@ export default function App(props : AppProperties) {
     return (
         <Fragment>
             <Top />
+            <Menu setState={setMenuState} currentState={menuState} />
             <div className="page">
-                <Menu setState={setMenuState} currentState={menuState}/>
                 <div className={styles.content}>
-                    <div className={`${styles.darkened} ${menuState.isHovered ? styles.darkenedActive : ''}`}></div>
+                    <div className={`${styles.darkened} ${menuState.isHovered ? styles.darkenedActive : ''}`} />
                     {
                         getCurrentPage(menuState.selectedItem, mods)
                     }
