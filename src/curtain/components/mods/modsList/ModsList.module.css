@@ -27,3 +27,23 @@
     overflow: auto;
     z-index: 1;
 }
+
+.title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.features {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.author {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.version {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
